@@ -1,0 +1,26 @@
+<div class="main">
+    <div class="main_box">
+        <div class="main_box_nav">
+            <a href="/converter" class="nav_tab" id="convert">Convert</a>
+            <a href="/sending" class="nav_tab" id="send">Send</a>
+            <a href="/chart" class="nav_tab" id="charts">Charts</a>
+            <a href="/alert" class="nav_tab" id="alerts">Alerts</a>
+        </div>
+        <div class="switch_box">
+        <% if (tab === "send") { %>
+            <%- include('../partials/e_send'); %>
+        <% } else if (tab === "chart") { %>
+            <%- include('../partials/e_charts'); %>
+        <% } else if (tab === "alert") { %>
+            <%- include('../partials/e_alerts'); %>
+        <% } else { %>
+            <%- include('../partials/e_convert'); %>
+        <% } %>
+
+        </div>
+    </div>
+    <div class="convert_boxes">
+
+    </div>
+</div>
+<script src="script.js"></script>
